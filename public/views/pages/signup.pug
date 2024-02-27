@@ -1,0 +1,26 @@
+extends ../base
+
+block content 
+    link(rel="stylesheet", href="/style/signup.css")
+    script(src="/script/signup.js", defer)
+    data.discordToken(token=`${discordToken}`)
+    main.main 
+        .form-container 
+            h1.heading-primary Create A New Account 
+            form.signup-form 
+                .input-div 
+                    label.label(for="name") Name 
+                    input.input#name(placeholder="e.g. Khaled"  type="text" name="name" required) 
+                .input-div 
+                    label.label(for="username") Username 
+                    input.input#username(placeholder="e.g. khaled"  type="text" name="username" required) 
+                .input-div 
+                    label.label(for="password") Password 
+                    input.input#password(placeholder="••••••••"  type="password" name="password" required) 
+                .input-div 
+                    label.label(for="passwordConfirm") Confirm Password
+                    input.input#passwordConfirm(placeholder="••••••••"  type="password" name="passwordConfirm" required) 
+                .input-div 
+                    label.label(for="email") E-mail
+                    input.input#email(placeholder="e.g info@example.com"  type="email" name="email" required) 
+                button.btn-fill(type="submit") Signup

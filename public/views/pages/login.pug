@@ -1,0 +1,16 @@
+extends ../base
+
+block content 
+    link(rel="stylesheet", href="/style/login.css")
+    script(src="/script/login.js", defer)
+    main.main 
+        .form-container 
+            h1.heading-primary Log into your account
+            form.login-form
+                .input-div 
+                    label.label(for="username") Username
+                    input.input#username(type="text" name="username" placeholder="e.g. khaled" required)
+                .input-div 
+                    label.label(for="password") Password
+                    input.input#password(type="password" name="password" placeholder="●●●●●●●●●●●" required)
+                button.btn-fill(type="submit") Login
